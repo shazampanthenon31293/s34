@@ -36,3 +36,10 @@ function s12(){
     }
   fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
 }
+var s1 = document.getElementById("Audio")
+function s13(){
+  s1.play()
+}
+function s14(){
+  s1.pause();
+}
