@@ -37,19 +37,42 @@ function s12(){
   fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
 }
 var x = document.getElementById("myAudio"); 
-
+var Title = ""
+var Artist = ""
+var Album = ""
 function playAudio() { 
   var e = document.getElementById("ddlViewBy");
   var strUser = e.options[e.selectedIndex].text;
   if(strUser=="SAD!"){
     document.getElementById("myAudio").src="SAD.mp3"
+    Title="Sad"
+    Artist = "XXXTentacion"
+    Album="?"
   }else if(strUser=="Robbery"){
     document.getElementById("myAudio").src="Robbery.mp3"
+    Title="Robbery"
+    Album="Death Race for Love"
+    Artist= "Juice Wrld"
   }
   document.getElementById('myAudio').play();
+  submit();
 
 } 
 
 function pauseAudio() { 
   document.getElementById('myAudio').pause(); 
 } 
+function submit(){
+  const headers = new Headers()
+  headers.append("Content-Type", "application/json")
+  const bod1 = { "Title": Title,
+  "Artist": Artist,
+"Album": Album}
+  const options = {
+    method: "POST",
+    headers,
+    mode: "cors",
+    body: JSON.stringify(bod1),
+    }
+  fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
+}
