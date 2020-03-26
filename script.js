@@ -83,6 +83,14 @@ function playAudio() {
     ReleaseYear="2019"
     Genre="Rap"
     document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
+  }else if(strUser=="Off The Rip"){
+    document.getElementById("myAudio").src="Off The Rip.mp3"
+    Title="Off The Rip"
+    Album="Kirk"
+    Artist= "DaBaby"
+    ReleaseYear="2019"
+    Genre="Rap"
+    document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
   }
   document.getElementById('myAudio').play();
   submit();
