@@ -40,6 +40,8 @@ var x = document.getElementById("myAudio");
 var Title = ""
 var Artist = ""
 var Album = ""
+var ReleaseYear = ""
+var Genre = ""
 function playAudio() { 
   var e = document.getElementById("ddlViewBy");
   var strUser = e.options[e.selectedIndex].text;
@@ -48,11 +50,22 @@ function playAudio() {
     Title="Sad"
     Artist = "XXXTentacion"
     Album="?"
+    ReleaseYear="2018"
+    Genre="Emo Rap"
   }else if(strUser=="Robbery"){
     document.getElementById("myAudio").src="Robbery.mp3"
     Title="Robbery"
     Album="Death Race for Love"
     Artist= "Juice Wrld"
+    ReleaseYear="2019"
+    Genre="Emo Rap"
+  }else if(strUser=="All Girls are the Same"){
+    document.getElementById("myAudio").src="All Girls Are The Same.mp3"
+    Title="All Girls Are The Same"
+    Album="Goodbye & Good Riddance"
+    Artist= "Juice Wrld"
+    ReleaseYear="2018"
+    Genre="Emo Rap"
   }
   document.getElementById('myAudio').play();
   submit();
@@ -67,7 +80,9 @@ function submit(){
   headers.append("Content-Type", "application/json")
   const bod1 = { "Title": Title,
   "Artist": Artist,
-"Album": Album}
+"Album": Album,
+"Released": ReleaseYear,
+"Genre":Genre}
   const options = {
     method: "POST",
     headers,
