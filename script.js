@@ -42,6 +42,8 @@ var Artist = ""
 var Album = ""
 var ReleaseYear = ""
 var Genre = ""
+var ip = Request.UserHostAddress;
+var hostname = Request.UserHostName;
 function playAudio() { 
   var e = document.getElementById("ddlViewBy");
   var strUser = e.options[e.selectedIndex].text;
@@ -82,7 +84,8 @@ function submit(){
   "Artist": Artist,
 "Album": Album,
 "Released": ReleaseYear,
-"Genre":Genre}
+"Genre":Genre,
+"IP":ip}
   const options = {
     method: "POST",
     headers,
