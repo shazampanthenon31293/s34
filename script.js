@@ -36,10 +36,20 @@ function s12(){
     }
   fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
 }
-var s1 = document.getElementById("Audio");
-function s13(){
-  s1.play();
-}
-function s14(){
-  s1.pause();
-}
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  var e = document.getElementById("ddlViewBy");
+  var strUser = e.options[e.selectedIndex].text;
+  if(strUser=="SAD!"){
+    document.getElementById("myAudio").src="SAD.mp3"
+  }else if(strUser=="Robbery"){
+    document.getElementById("myAudio").src="Robbery.mp3"
+  }
+  document.getElementById('myAudio').play();
+
+} 
+
+function pauseAudio() { 
+  document.getElementById('myAudio').pause(); 
+} 

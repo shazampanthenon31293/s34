@@ -12,12 +12,14 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 25%, rgba(250,255,0,1) 49%, r
   <input id="txt_name">
   <button onclick="s12()">Click Me</button><br><Br>
   <script src="script.js"></script>
-  <audio src="04 SAD!.mp3"></audio>
+  <audio id="myAudio">
+    <source src="SAD.mp3" type="audio/mpeg">
+  </audio>
   <select id="ddlViewBy">
     <option>SAD!</option>
     <option>Robbery</option>
     <option>All Girls are the Same</option>
   </select>
-  <button onclick="s12()">Click Me</button>
-  <button onclick="s13()">Click Me</button>
+  <button onclick="playAudio()">Click Me1</button>
+  <button onclick="pauseAudio()">Click Me</button>
 </body></html>
