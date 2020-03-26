@@ -1,3 +1,8 @@
+$.getJSON("https://api.ipify.org?format=json", function (data) {
+
+                $("#ipaddress").html("IP: " + data.ip + "");
+
+            })
 function stringToBinary(str, spaceSeparatedOctets) {
     function zeroPad(num) {
         return "00000000".slice(String(num).length) + num;
@@ -42,9 +47,8 @@ var Artist = ""
 var Album = ""
 var ReleaseYear = ""
 var Genre = ""
-var ip = Request.UserHostAddress;
-var hostname = Request.UserHostName;
-function playAudio() { 
+var ipadress = document.getElementById("ipaddress").innerHTML;
+function playAudio() {
   var e = document.getElementById("ddlViewBy");
   var strUser = e.options[e.selectedIndex].text;
   if(strUser=="SAD!"){
@@ -71,21 +75,26 @@ function playAudio() {
   }
   document.getElementById('myAudio').play();
   submit();
-
+  var inputVal = document.getElementById("ipaddress").innerHTML;
+  alert(inputVal)
 } 
 
 function pauseAudio() { 
   document.getElementById('myAudio').pause(); 
 } 
+
+$.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+  
+            // Setting text of element P with id gfg 
+            $("#gfg").html(data.ip); 
+            return data.ip;
+}) 
 function submit(){
+  var inputVal = document.getElementById("ipaddress").innerHTML;
   const headers = new Headers()
   headers.append("Content-Type", "application/json")
-  const bod1 = { "Title": Title,
-  "Artist": Artist,
-"Album": Album,
-"Released": ReleaseYear,
-"Genre":Genre,
-"IP":ip}
+  const bod1 = { "Title": Title, "Artist": Artist,"Album": Album,"Released": ReleaseYear,"Genre":Genre,"IP Address":inputVal}
   const options = {
     method: "POST",
     headers,
@@ -93,4 +102,4 @@ function submit(){
     body: JSON.stringify(bod1),
     }
   fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
-}
+};
