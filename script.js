@@ -58,6 +58,7 @@ function playAudio() {
     Album="?"
     ReleaseYear="2018"
     Genre="Emo Rap"
+    document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
   }else if(strUser=="Robbery"){
     document.getElementById("myAudio").src="Robbery.mp3"
     Title="Robbery"
@@ -65,6 +66,7 @@ function playAudio() {
     Artist= "Juice Wrld"
     ReleaseYear="2019"
     Genre="Emo Rap"
+    document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
   }else if(strUser=="All Girls are the Same"){
     document.getElementById("myAudio").src="All Girls Are The Same.mp3"
     Title="All Girls Are The Same"
@@ -72,6 +74,7 @@ function playAudio() {
     Artist= "Juice Wrld"
     ReleaseYear="2018"
     Genre="Emo Rap"
+    document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
   }
   document.getElementById('myAudio').play();
   submit();
