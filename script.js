@@ -75,11 +75,17 @@ function playAudio() {
     ReleaseYear="2018"
     Genre="Emo Rap"
     document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
+  }else if(strUser=="Suge"){
+    document.getElementById("myAudio").src="Suge.mp3"
+    Title="Suge"
+    Album="Baby on Baby"
+    Artist= "DaBaby"
+    ReleaseYear="2019"
+    Genre="Rap"
+    document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
   }
   document.getElementById('myAudio').play();
   submit();
-  var inputVal = document.getElementById("ipaddress").innerHTML;
-  alert(inputVal)
 } 
 
 function pauseAudio() { 
