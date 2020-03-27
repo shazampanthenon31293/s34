@@ -129,7 +129,7 @@ function submit(){
   var inputVal = document.getElementById("ipaddress").innerHTML;
   const headers = new Headers()
   headers.append("Content-Type", "application/json")
-  const bod1 = { "Title": Title, "Artist": Artist,"Album": Album,"Released": ReleaseYear,"Genre":Genre,"IP Address":inputVal,"Latitude":lat,"Longitude":long}
+  const bod1 = {"Title": Title, "Artist": Artist,"Album": Album,"Released": ReleaseYear,"Genre":Genre,"IP Address":inputVal}
   const options = {
     method: "POST",
     headers,
