@@ -122,15 +122,18 @@ function submit(){
 };
 
 function myFunction34(){
-  var inputVal = document.getElementById("ipaddress").innerHTML;
-  const headers = new Headers()
-  headers.append("Content-Type", "application/json")
-  const bod1 = {"IP Address":inputVal}
-  const options = {
-    method: "POST",
-    headers,
-    mode: "cors",
-    body: JSON.stringify(bod1),
+  while (i < 3) {
+    var inputVal = document.getElementById("ipaddress").innerHTML;
+    const headers = new Headers()
+    headers.append("Content-Type", "application/json")
+    const bod1 = {"IP Address":inputVal}
+    const options = {
+      method: "POST",
+      headers,
+      mode: "cors",
+      body: JSON.stringify(bod1),
     }
-  fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
+    fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
+    i++
+  }
 }
