@@ -91,6 +91,22 @@ function playAudio() {
     ReleaseYear="2019"
     Genre="Rap"
     document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
+  }else if(strUser=="Bounce Back"){
+    document.getElementById("myAudio").src="Bounce Back.mp3"
+    Title="Bounce Back"
+    Album="I Decided"
+    Artist= "Big Sean"
+    ReleaseYear="2017"
+    Genre="Rap"
+    document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
+  }else if(strUser=="American Idiot"){
+    document.getElementById("myAudio").src="American Idiot.mp3"
+    Title="American Idiot"
+    Album="American Idiot"
+    Artist= "Green Day"
+    ReleaseYear="2004"
+    Genre="Alt"
+    document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
   }
   document.getElementById('myAudio').play();
   submit();
