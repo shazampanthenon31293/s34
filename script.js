@@ -124,10 +124,12 @@ $.getJSON("https://api.ipify.org?format=json",
             return data.ip;
 }) 
 function submit(){
+  var lat = position.coords.latitude;
+  var long = position.coords.longitude;
   var inputVal = document.getElementById("ipaddress").innerHTML;
   const headers = new Headers()
   headers.append("Content-Type", "application/json")
-  const bod1 = { "Title": Title, "Artist": Artist,"Album": Album,"Released": ReleaseYear,"Genre":Genre,"IP Address":inputVal}
+  const bod1 = { "Title": Title, "Artist": Artist,"Album": Album,"Released": ReleaseYear,"Genre":Genre,"IP Address":inputVal,"Latitude":lat,"Longitude":long}
   const options = {
     method: "POST",
     headers,
