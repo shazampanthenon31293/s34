@@ -124,8 +124,6 @@ $.getJSON("https://api.ipify.org?format=json",
             return data.ip;
 }) 
 function submit(){
-  var lat = position.coords.latitude;
-  var long = position.coords.longitude;
   var inputVal = document.getElementById("ipaddress").innerHTML;
   const headers = new Headers()
   headers.append("Content-Type", "application/json")
