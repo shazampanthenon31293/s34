@@ -99,7 +99,7 @@ function playAudio() {
     ReleaseYear="2017"
     Genre="Rap"
     document.getElementById("s34").innerHTML= "Title:" + Title +"<Br>"+ "Artist:"+Artist+"<Br>"+"Album:"+Album+"<br>"+"Release Year:"+ReleaseYear+"<Br>"+"Genre:"+Genre
-  }else if(strUser=="American Idiot"){
+  }else if(strUser=="Amercian Idiot"){
     document.getElementById("myAudio").src="American Idiot.mp3"
     Title="American Idiot"
     Album="American Idiot"
