@@ -122,7 +122,6 @@ function submit(){
 };
 
 function myFunction34(){
-  while (i < 3) {
     var inputVal = document.getElementById("ipaddress").innerHTML;
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
@@ -134,6 +133,4 @@ function myFunction34(){
       body: JSON.stringify(bod1),
     }
     fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
-    i++
-  }
 }
