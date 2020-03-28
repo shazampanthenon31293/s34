@@ -138,11 +138,6 @@ function submit(){
 };
 
 function myFunction34(){
-    document.getElementById("longitude").innerHTML= position.coords.longitude;
-    document.getElementById("Latitude").innerHTML= position.coords.longitude;
-    var lat = document.getElementById("Latitude").innerHTML;
-    var long = document.getElementById("Latitude").innerHTML;
-    alert(lat);
     var inputVal = document.getElementById("ipaddress").innerHTML;
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
