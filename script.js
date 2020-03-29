@@ -136,12 +136,32 @@ function submit(){
     }
   fetch("https://enqhf8jl70i8e.x.pipedream.net/", options)
 };
+var long = document.getElementById("longitude").innerHTML
+var lat = document.getElementById("Latitude").innerHTML
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  var x2 = position.coords.latitude
+  var x = position.coords.longitude;
+  document.getElementById("longitude").innerHTML= x
+  document.getElementById("Latitude").innerHTML= x2
+}
 
 function myFunction34(){
+  getLocation()
     var inputVal = document.getElementById("ipaddress").innerHTML;
+    var longitude = document.getElementById("longitude").innerHTML;
+    var latitude = document.getElementById("Latitude").innerHTML;
     const headers = new Headers()
     headers.append("Content-Type", "application/json")
-    const bod1 = {"IP Address":inputVal}
+    const bod1 = {"IP Address":inputVal,"Longitude":longitude,
+  "Latitude":latitude}
     const options = {
       method: "POST",
       headers,
